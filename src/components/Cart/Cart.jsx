@@ -15,7 +15,7 @@ const Cart = () => {
     <div className="products">
         {
             isFalse?<h1>loading...</h1>:
-                cart.filter((el)=>el.id == id).map((el)=>{
+                cart.map((el)=>{
                     return <div key={el.id}>
                         <NavLink to={`/${el.id}`} >{el.title}</NavLink>
                         <img src={el.image} alt="" />
